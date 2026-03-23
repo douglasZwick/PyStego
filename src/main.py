@@ -1,3 +1,6 @@
+from PIL import Image
+
+
 GREETING: str = "PyStego {{VERSION}}, Copyright (c) 2026 Doug Zwick"
 VERSION_MAJOR: int = 0
 VERSION_MINOR: int = 0
@@ -14,6 +17,8 @@ def get_greeting_str() -> str:
 
 def main() -> None:
   print(get_greeting_str())
+  img = Image.open("images/faxanadu.jpg")
+  print(img.format, img.size, img.mode)
 
 
 main()
